@@ -1,0 +1,41 @@
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <head>
+       <!--  <css src="Magento_Theme::css/style.css"/> -->
+        <script src="requirejs/require.js"></script>
+    </head>
+    <body>
+        <attribute name="id" value="html-body"/>  
+        <referenceBlock name="logo" remove="true"/>
+        <referenceContainer name="columns">
+            <!-- Left Column -->
+            <container name="left.column" label="Left Column" htmlTag="div" htmlClass="column sidebar" before="-">
+                <block class="Magento\Framework\View\Element\Template" name="tab1" template="Magento_Theme::html/tab1.phtml" />
+                <block class="Magento\Framework\View\Element\Template" name="tab2" template="Magento_Theme::html/tab2.phtml" /> 
+            </container>
+
+            <!-- Main Content Column -->
+            <container name="custom.main.content" label="Main Content" htmlTag="div" htmlClass="column main" after="left.column">
+                <block class="Magento\Framework\View\Element\Template" name="tab3" template="Magento_Theme::html/tab3.phtml" />
+            </container>
+
+            <!-- Right Column -->
+            <container name="right.column" label="Right Column" htmlTag="div" htmlClass="column sidebar" after="custom.main.content">
+                <block class="Magento\Framework\View\Element\Template" name="tab5" template="Magento_Theme::html/tab5.phtml" />
+                <block class="Magento\Cms\Block\Block" name="good_weather_">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">good_weather_</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+    </body>
+</page>
+
+
+
+
+
+
+
+

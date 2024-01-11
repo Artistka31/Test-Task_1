@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <!-- Add default meta tags -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        <meta name="format-detection" content="telephone=no"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+        <!-- Add default link tags -->
+        <link rel="stylesheet" type="text/css" src="css/styles-m.css"/>
+        <link rel="stylesheet" type="text/css" src="css/styles-l.css"/>
+
+        <!-- Add default script tags -->
+        <script src="requirejs/require.js"/>
+    </head>
+</page>

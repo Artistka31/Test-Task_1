@@ -1,0 +1,48 @@
+<a href="#" id="openPopupLink"><span>Tab2</span></br><button id="openPopupButton" style="padding: 0.7rem; background: red; color: white">Open</button></a>
+
+<div id="popupContentWrapper" class="white-popup mfp-hide">
+    <div id="popupContent" class="modal-content">
+        <?php echo $block->getLayout()->createBlock('Magento\Framework\View\Element\Template')->setTemplate('Magento_Theme::popup_template.phtml')->toHtml(); ?>
+    </div>
+</div>
+
+<script>
+    require(['jquery', 'Magento_Ui/js/modal/modal'], function ($) {
+        $(document).ready(function () {
+            // Опції для Magento Popup
+            var options = {
+                type: "popup",
+                responsive: true,
+                innerScroll: true,
+                title: "Даруємо відеоурок з йогі для новачків за підписку!", // Замініть на потрібний заголовок
+                buttons: [
+                    {
+                        text: $.mage.__("Close"),
+                        class: "action red",
+                        click: function () {
+                            this.closeModal();
+                        },
+                    },
+                ],
+            };
+
+            // Ініціалізація Magento Popup
+            var popup = $("#popupContentWrapper").modal(options);
+
+            // Обробник подій для кнопки
+            $("#openPopupButton").on("click", function () {
+                // Переключення контенту в модальне вікно
+                popup.modal('setTitle', options.title); // Оновлюємо заголовок (при необхідності)
+                popup.modal('openModal');
+            });
+        });
+    });
+</script>
+
+
+
+
+
+ 
+
+

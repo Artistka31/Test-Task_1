@@ -1,0 +1,50 @@
+<a href="#tab2" class="open-popup-link" data-section="section2"><span style="display: inline-block; margin-bottom: 1rem;">Tab 1</span>
+<div id="custom-accordion" data-mage-init='{
+    "accordion": {
+        "openedState": "active",
+        "collapsible": true,
+        "active": "false",
+        "multipleCollapsible": true,
+        "animate": {
+            "duration": 200,
+            "easing": "easeOutCubic"
+        }
+    }
+}'>
+    <div data-role="collapsible">
+        <div data-role="trigger">
+            <span style="display: inline-block; margin-bottom: 1rem;">Section 1</span>
+        </div>
+        <div data-role="content">
+            <p>Content for Section 1</p>
+        </div>
+    </div>
+       
+    <div data-role="collapsible">
+        <div data-role="trigger">
+            <span style="display: inline-block; margin-bottom: 5rem;">Section 2</span>
+        </div>
+        <div data-role="content">
+            <p>Content for Section 2</p>
+            
+            <div id="carousel" class="owl-carousel">
+            <!-- Додайте зображення каруселі, необхідні JS-бібліотеки і код ініціалізації каруселі -->
+            <div class="item" style="text-align: center;"><img src="/pub/static/frontend/Sean/test/en_US/Magento_Theme/images/image1.JPG" alt="Image 1" style="width: 30%;" /></div>
+            <div class="item" style="text-align: center;"><img src="/pub/static/frontend/Sean/test/en_US/Magento_Theme/images/image2.JPG" alt="Image 2" style="width: 30%;" /></div>
+            <div class="item" style="text-align: center;"><img src="/pub/static/frontend/Sean/test/en_US/Magento_Theme/images/image3.JPG" alt="Image 3" style="width: 30%;" /></div>
+            <!-- Додайте інші зображення за потребою -->
+<    </div>
+        </div>
+    </div>
+</div>
+</a>
+
+<script>
+    $(document).ready(function() {
+        $('.open-popup-link').magnificPopup({
+            type: 'inline',
+            midClick: true // Allow opening the lightbox with a middle mouse click
+        });
+    });
+</script>
+
